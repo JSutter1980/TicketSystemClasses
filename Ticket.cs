@@ -9,3 +9,8 @@ public class Ticket
     public string watch { get; set; }
 
 }
+
+public string Display()
+    {
+        return $"Id: {ticketId}\nSummery: {summary}\nStatus: {status}\nPriority: {priority}\nSubmitted by: {owner}\nAssigned to: {assign}\nWatched by: {watch}\n";
+    }

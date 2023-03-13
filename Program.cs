@@ -3,7 +3,7 @@ string choice;
 do
 {
     //declare ticket list
-    //List ticketList = new List<Ticket>
+    List<Ticket> ticketList = new List<Ticket>();
     //if(file exists){
         //read each line
         //create new ticket obj
@@ -17,12 +17,9 @@ do
 
     if (choice == "1")
     {
-        //MAKE SURE THE FILE IS EMPTY
-        //loop through ticket list
-        //for(ticket in ticketList){
-            //print ticket data
-            //write to file
-        //}
+     foreach(Ticket ticket in ticketList){
+        Console.WriteLine(ticket.Display());
+     }
     }
     else if (choice == "2")
     {
@@ -46,6 +43,6 @@ do
         Console.WriteLine("Who is Watching Ticket?");
         ticket.watch = Console.ReadLine();
 
-        //add ticket to list
+        ticketList.Add(ticket);
     }
 } while (choice == "1" || choice == "2");
