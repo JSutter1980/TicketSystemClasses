@@ -1,4 +1,4 @@
-﻿string file = "TicketData.txt";
+﻿
 string choice;
 do
 {
@@ -7,6 +7,7 @@ do
     //if(file exists){
         //read each line
         //create new ticket obj
+        //add to list
         //add to list
     //}
     Console.WriteLine("1) Read Ticket Information.");
@@ -18,7 +19,8 @@ do
     if (choice == "1")
     {
      foreach(Ticket ticket in ticketList){
-        Console.WriteLine(ticket.Display());
+        Console.WriteLine(ticket.summary);
+        // Console.WriteLine(ticket.Display());
      }
     }
     else if (choice == "2")
