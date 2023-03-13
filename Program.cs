@@ -1,15 +1,10 @@
 ﻿
 string choice;
+List<Ticket> ticketList = new List<Ticket>();
+
 do
 {
-    //declare ticket list
-    List<Ticket> ticketList = new List<Ticket>();
-    //if(file exists){
-        //read each line
-        //create new ticket obj
-        //add to list
-        //add to list
-    //}
+   
     Console.WriteLine("1) Read Ticket Information.");
     Console.WriteLine("2) Create New Ticket.");
     Console.WriteLine("Enter any other key to exit.");
@@ -19,8 +14,8 @@ do
     if (choice == "1")
     {
      foreach(Ticket ticket in ticketList){
-        Console.WriteLine(ticket.summary);
-        // Console.WriteLine(ticket.Display());
+        
+        Console.WriteLine(ticket.Display());
      }
     }
     else if (choice == "2")
@@ -29,6 +24,7 @@ do
 
         Console.WriteLine("Ticket Summery");
         ticket.summary = Console.ReadLine();
+        Console.WriteLine(ticket.summary);
 
         Console.WriteLine("Enter Ticket Status");
         ticket.status = Console.ReadLine();
