@@ -1,6 +1,6 @@
 public class Ticket
 {
-    public UInt64 ticketId { get; set; }
+    public int ticketId { get; set; }
     public string summary { get; set; }
     public string status { get; set; }
     public string priority { get; set; }
@@ -10,7 +10,7 @@ public class Ticket
 
     public string Display()
     {
-        return $"Id: {ticketId}\nSummery: {summary}\nStatus: {status}\nPriority: {priority}\nSubmitted by: {owner}\nAssigned to: {assign}\nWatched by: {watch}\n";
+        return $"Id: {ticketId}\nSummary: {summary}\nStatus: {status}\nPriority: {priority}\nSubmitted by: {owner}\nAssigned to: {assign}\nWatched by: {watch}\n";
     }
 }
 
